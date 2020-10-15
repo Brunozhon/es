@@ -5,5 +5,7 @@ var person = {
 };
 var chips = {
   money: 5,
-  name: "chips"
-}
+  buy: function() {
+    person.money = person.money - chips.money;
+  }
+};
