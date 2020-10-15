@@ -9,5 +9,9 @@ var chips = {
   buy: function() {
     person.money = person.money - chips.money;
     chips.chips = chips.chips + 1;
+  },
+  eat: function() {
+    person.fat = person.fat + 10;
+    person.cals = person.cals + 50;
   }
 };
