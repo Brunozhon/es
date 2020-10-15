@@ -13,5 +13,6 @@ var chips = {
   eat: function() {
     person.fat = person.fat + 10;
     person.cals = person.cals + 50;
+    chips.chips = chips.chips - 1;
   }
 };
