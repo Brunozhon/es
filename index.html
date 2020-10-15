@@ -7,6 +7,8 @@
     <p>Visit on <a href="https://github.com/Brunozhon/es">GitHub</a>!</p>
     <p><b>Money</b>: <span id="money"></span></p>
     <p><b>Chips</b>: <span id="chips"></span></p>
+    <p><b>Calories</b>: <span id="cals"></span></p>
+    <p><b>Fat</b>: <span id="fat"></span></p>
     <!--
     The shop
     -->
@@ -36,8 +38,12 @@ Total fat: 9 grams
     <script>
       var doc = document.getElementById("money");
       var chip = document.getElementById("chips");
+      var cal = document.getElementById("cals");
+      var fat = document.getElementById("fat");
       doc.innerHTML = person.money;
       chip.innerHTML = chips.chips;
+      cal.innerHTML = person.cals;
+      fat.innerHTML = person.fat;
       function chipsBuy() {
         chips.buy();
         doc.innerHTML = person.money;
