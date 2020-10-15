@@ -30,8 +30,8 @@
     </pre>
     <p><b>Chips Nutrition Facts</b>:</p>
     <pre>
-Calories: 300
-Total fat: 9 grams
+Calories: 50
+Total fat: 10 grams
 <i>Percantege daily values are based on a 2000 calorie diet</i>
     </pre>
     <p>Cost: $5 <button onclick="chipsBuy()">Buy</button></p>
@@ -48,6 +48,8 @@ Total fat: 9 grams
         chips.buy();
         doc.innerHTML = person.money;
         chip.innerHTML = chips.chips;
+        cal.innerHTML = person.cals;
+        fat.innerHTML = person.fat;
       }
     </script>
   </body>
