@@ -34,7 +34,7 @@ Calories: 50
 Total fat: 10 grams
 <i>Percantege daily values are based on a 2000 calorie diet</i>
     </pre>
-    <p>Cost: $5 <button onclick="chipsBuy()">Buy</button></p>
+    <p>Cost: $5 <button onclick="chipsBuy()">Buy</button> <button>EAT!</button></p>
     <script>
       var doc = document.getElementById("money");
       var chip = document.getElementById("chips");
@@ -47,6 +47,12 @@ Total fat: 10 grams
       function chipsBuy() {
         chips.buy();
         doc.innerHTML = person.money;
+        chip.innerHTML = chips.chips;
+        cal.innerHTML = person.cals;
+        fat.innerHTML = person.fat;
+      }
+      function chipsEat() {
+        chips.eat()
         chip.innerHTML = chips.chips;
         cal.innerHTML = person.cals;
         fat.innerHTML = person.fat;
