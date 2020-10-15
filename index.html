@@ -1,9 +1,11 @@
 <html>
   <head>
     <title>Eating simulator</title>
+    <script src="https://brunozhon.github.io/es/main.js"></script>
   </head>
   <body>
     <p>Visit on <a href="https://github.com/Brunozhon/es">GitHub</a>!</p>
+    <p><b>Money</b>: <span id="money"></span></p>
     <!--
     The shop
     -->
@@ -30,5 +32,8 @@ Total fat: 9 grams
 <i>Percantege daily values are based on a 2000 calorie diet</i>
     </pre>
     <p>Cost: $5 <button>Buy</button></p>
+    <script>
+      document.getElementById("money").innerHTML = person.money;
+    </script>
   </body>
 </html>
