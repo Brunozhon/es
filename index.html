@@ -6,6 +6,7 @@
   <body>
     <p>Visit on <a href="https://github.com/Brunozhon/es">GitHub</a>!</p>
     <p><b>Money</b>: <span id="money"></span></p>
+    <p><b>Chips</b>: <span id="chips"></span></p>
     <!--
     The shop
     -->
@@ -34,10 +35,13 @@ Total fat: 9 grams
     <p>Cost: $5 <button onclick="chipsBuy()">Buy</button></p>
     <script>
       var doc = document.getElementById("money");
+      var chip = document.getElementById("chips");
       doc.innerHTML = person.money;
+      chip.innerHTML = chips.chips;
       function chipsBuy() {
         chips.buy();
         doc.innerHTML = person.money;
+        chip.innerHTML = chips.chips;
       }
     </script>
   </body>
