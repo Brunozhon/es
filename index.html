@@ -2,18 +2,22 @@
   <head>
     <title>Eating simulator</title>
     <script src="https://brunozhon.github.io/es/main.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
   <body>
-    <p>Visit on <a href="https://github.com/Brunozhon/es">GitHub</a>!</p>
-    <p><b>Money</b>: <span id="money"></span></p>
-    <p><b>Chips</b>: <span id="chips"></span></p>
-    <p><b>Calories</b>: <span id="cals"></span></p>
-    <p><b>Fat</b>: <span id="fat"></span></p>
+    <div class="w3-bar w3-red">
+      <div class="w3-bar-item">Visit on <a href="https://github.com/Brunozhon/es">GitHub</a>!</div>
+      <div class="w3-bar-item"><b>Money</b>: <span id="money"></span></div>
+      <div class="w3-bar-item"><b>Chips</b>: <span id="chips"></span></div>
+      <div class="w3-bar-item"><b>Calories</b>: <span id="cals"></span></div>
+      <div class="w3-bar-item"><b>Fat</b>: <span id="fat"></span></div>
+    </div>
     <!--
     The shop
     -->
-    <h1>Shop</h1>
-    <pre>
+    <div class="w3-quarter w3-container w3-red w3-hide-small">
+      <h3>Shop</h3>
+      <pre>
 |^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^|
 |                                             |
 |                                             |
@@ -27,14 +31,42 @@
 |                                             |
 |                                             |
 |---------------------------------------------|
-    </pre>
-    <p><b>Chips Nutrition Facts</b>:</p>
-    <pre>
+      </pre>
+      <p><b>Chips Nutrition Facts</b>:</p>
+      <pre>
 Calories: 50
 Total fat: 10 grams
 <i>Percantege daily values are based on a 2000 calorie diet</i>
-    </pre>
-    <p>Cost: $5 <button onclick="chipsBuy()">Buy</button> <button onclick="chipsEat()">EAT!</button></p>
+      </pre>
+      <p>Cost: $5 <button onclick="chipsBuy()">Buy</button> <button onclick="chipsEat()">EAT!</button></p>
+    </div>
+    <div class="w3-rest w3-container">
+      <h1>The eating simulator</h1>
+      <div class="w3-hide-large w3-hide-medium w3-container w3-red">
+      <h3>Shop</h3>
+      <pre>
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^|
+|                                             |
+|                                             |
+|                                             |
+|       --- |    |  --- -----  ------         |
+|       |   |    |   |  |    | |              |
+|       |   |----|   |  ------ ------         |
+|       |   |    |   |  |           |         |
+|       --- |    |  --- |      ------         |
+|                                             |
+|                                             |
+|                                             |
+|---------------------------------------------|
+      </pre>
+      <p><b>Chips Nutrition Facts</b>:</p>
+      <pre>
+Calories: 50
+Total fat: 10 grams
+<i>Percantege daily values are based on a 2000 calorie diet</i>
+      </pre>
+      <p>Cost: $5 <button onclick="chipsBuy()">Buy</button> <button onclick="chipsEat()">EAT!</button></p>
+    </div>
     <script>
       var doc = document.getElementById("money");
       var chip = document.getElementById("chips");
