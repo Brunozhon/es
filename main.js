@@ -15,7 +15,7 @@ var chips = {
     }
   },
   eat: function() {
-    if (chips.chips < 0) {
+    if (chips.chips > 0) {
       person.fat = person.fat + 10;
       person.cals = person.cals + 50;
       chips.chips = chips.chips - 1;
