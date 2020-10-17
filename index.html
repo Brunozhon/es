@@ -117,14 +117,15 @@ Total fat: 10 grams
         cal.innerHTML = person.cals;
         fat.innerHTML = person.fat;
       }
-      $(document).ready(function() {
+      $(document).ready(function(){
         $("#input").on("keyup", function() {
-          var value = $("#input").val().toLowerCase();
-          $("#search a").filter(function() {
-            $("#search a").toggle($("#search a").text().toLowerCase().indexOf(value) > -1);
-          });
+          var value = $(this).val().toLowerCase();
+          $("#search *").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
       });
+    });
+      
     </script>
   </body>
 </html>
