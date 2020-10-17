@@ -20,6 +20,7 @@
     <div class="w3-row">
     <div class="w3-quarter w3-container w3-red w3-hide-small" style="overflow-x: auto;">
       <h3>Shop</h3>
+      <div class="w3-display-container w3-hover-opacity">
       <pre>
 |^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^|
 |                                             |
@@ -35,13 +36,16 @@
 |                                             |
 |---------------------------------------------|
       </pre>
-      <p><b>Chips Nutrition Facts</b>:</p>
-      <pre>
+        <div class="w3-display-middle w3-display-hover w3-xlarge">
+          <p><b>Chips Nutrition Facts</b>:</p>
+          <pre>
 Calories: 50
 Total fat: 10 grams
 <i>Percantege daily values are based on a 2000 calorie diet</i>
-      </pre>
-      <p>Cost: $5 <button onclick="chipsBuy()">Buy</button> <button onclick="chipsEat()">EAT!</button></p>
+          </pre>
+          <p>Cost: $5 <button onclick="chipsBuy()">Buy</button> <button onclick="chipsEat()">EAT!</button></p>
+        </div>
+      </div>
     </div>
     <div class="w3-rest w3-container">
       <h1>The eating simulator</h1>
@@ -68,7 +72,7 @@ Calories: 50
 Total fat: 10 grams
 <i>Percantege daily values are based on a 2000 calorie diet</i>
       </pre>
-      <p>Cost: $5 <button onclick="chipsBuy()">Buy</button> <button onclick="chipsEat()">EAT!</button></p>
+      <p>Cost: $5 <button onclick="chipsBuy()" class="w3-button w3-red">Buy</button> <button onclick="chipsEat()" class="w3-button w3-red">EAT!</button></p>
     </div>
     <h2>Questions</h2>
     <p><b>How did I get the idea?</b>: From <a href="https://github.com/Eating-simulator">Eating Simulator</a>.</p>
