@@ -25,8 +25,8 @@
         } else {
           error2.style.display = "block";
         }
-        var special = /[0-9]/g;
-        if (input.value.match(special)) {
+        //var special = /[0-9]/g;
+        if (input.value.length > 7) {
           error3.style.display = "none";
         } else {
           error3.style.display = "block";
