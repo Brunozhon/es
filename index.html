@@ -85,6 +85,7 @@ Total fat: 10 grams
     <p><b>It it more fun than Eating Simulator</b>: By the way, I'm still working on the project. Maybe one day it will get better than Eating Simulator</p>
     <p><b>Are you a comptitor of Eating Simulator</b>: You will see...</p>
       <p><a href="https://brunozhon.github.io/es/faq/" target="_blank">More FAQ's...</a></p>
+      <p><button onclick="read()">Read a book</button></p>
     </div>
     </div>
     <div class="w3-container w3-red">
@@ -123,14 +124,18 @@ Total fat: 10 grams
         cal.innerHTML = person.cals;
         fat.innerHTML = person.fat;
       }
+      function read() {
+        book.read();
+        doc.innerHTML = person.money;
+      }
       $(document).ready(function(){
         $("#input").on("keyup", function() {
           var value = $(this).val().toLowerCase();
           $("#search *").filter(function() {
           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+         });
         });
       });
-    });
       
     </script>
   </body>
