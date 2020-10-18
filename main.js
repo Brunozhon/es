@@ -24,3 +24,15 @@ var chips = {
     }
   }
 };
+var book = {
+  read: function() {
+    alert("The dog.")
+    alert("The cat.")
+    alert("The lion.")
+    alert("The tiger.")
+    alert("The penguin.")
+    alert("The zebra...")
+    alert("Fit in the zoo!")
+    person.money = person.money + 2;
+  }
+};
