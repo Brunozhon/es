@@ -1,12 +1,27 @@
 <html>
   <head>
     <title>Confirm code | Eating Simulator</title>
+    <style>
+      .loader {
+        border: 16px solid #808080;
+        border-top: 16px solid #FF0000;
+        width: 50px;
+        height: 50px;
+        animation: spin 2s linear infinite;
+      }
+      @keyframes spin {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+      }
+    </style>
   </head>
   <body>
     <input type="text" id="in" />
     <p style="color: red; display: none;" id="low">Code does not contain a lowercase letter.</p>
     <p style="color: red; display: none;" id="up">Code does not contain a uppercase letter.</p>
     <p style="color: red; display: none;" id="sp">Code must have at least eight charecters.</p>
+    <div class="loader"></div>
+    <p>We are processing your data...</p>
     <script>
       var input = document.getElementById("in");
       var error1 = document.getElementById("low");
