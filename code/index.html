@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Confirm code | Eating Simulator</title>
+  </head>
+  <body>
+    <input type="text" id="in" />
+    <p style="color: red; display: none;" id="low">Code does not contain a lowercase letter.</p>
+    <p style="color: red; display: none;" id="up">Code does not contain a uppercase letter.</p>
+    <p style="color: red; display: none;" id="sp">Code does not contain a !, @, #, $, %, or &.</p>
+    <script>
+      var input = document.getElementById("in");
+      var error1 = document.getElementById("low");
+      var error2 = document.getElementById("up");
+      var error3 = document.getElementById("sp");
+      input.onkeyup = function() {
+        var lower = /[a-z]/g;
+        if (input.value.match(lower)) {
+          error1.style.display = "none";
+        } else {
+          error1.style.display = "block";
+        }
+        var upper = /[A-Z]/g;
+        if (input.value.match(upper)) {
+          error2.style.display = "none";
+        } else {
+          error2.style.display = "block";
+        }
+        var special = /(!|@|#|$|%|&)/g;
+        if (input.value.match(special)) {
+          error3.style.display = "none";
+        } else {
+          error3.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
