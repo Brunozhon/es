@@ -1,0 +1,1 @@
+var say = ["Hi! Did you write before?", "I've never seen you before, but did you write before?", "Target found. Did you write before?", "Hiya! Did you write before?"]; document.getElementById("writer").innerHTML = say[Math.floor(Math.random() * say.length)]; /*Like a random array value picker*/
