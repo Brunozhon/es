@@ -21,14 +21,16 @@
     <p style="color: red;" id="low">Code does not contain a lowercase letter.</p>
     <p style="color: red;" id="up">Code does not contain a uppercase letter.</p>
     <p style="color: red;" id="sp">Code must have at least eight charecters.</p>
+    <p style="color: red; display: none;" id="spa">No spaces allowed</p>
     <div class="loader"></div>
     <p>We are processing your data...</p>
-    <button onclick='window.location.assign("https://brunozhon.github.io/es/user/")' id="but">Submit</button>
+    <button onclick='window.location.assign("https://brunozhon.github.io/es/user/")' id="but" disabled="disabled">Submit</button>
     <script>
       var input = document.getElementById("in");
       var error1 = document.getElementById("low");
       var error2 = document.getElementById("up");
       var error3 = document.getElementById("sp");
+      var error4 = document.getElementById("spa");
       var but = document.getElementById("but");
       input.onkeyup = function() {
         var lower = /[a-z]/g;
@@ -54,6 +56,14 @@
         } else {
           error3.style.display = "block";
           but.disabled = "disabled";
+        }
+        var space = / /g;
+        if (input.value.match(space)) {
+          error4.style.display = "block";
+          but.disabled = "disabled";
+        } else {
+          error4.style.display = "none";
+          but.disabled = "";
         }
       }
     </script>
