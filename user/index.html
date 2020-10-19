@@ -3,11 +3,18 @@
     <title>Eating Simulator User</title>
   </head>
   <body onload="check()">
-    <p>Welcome</p>
+    <p>Welcome!</p>
+    <h2>My projects</h2>
+    <p>My autocomplete: <input type="text" list="ex" /></p>
+    <datalist id="ex">
+      <option value="One">
+        <option value="Two">
+      <option value="Three">
+    </datalist>
     <script>
       var user;
       function check() {
-        user = prompt("What is your name");
+        user = prompt("What is your name:")
         alert("Welcome " + user + "!")
       }
     </script>
