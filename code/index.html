@@ -36,26 +36,26 @@
         var lower = /[a-z]/g;
         if (input.value.match(lower)) {
           error1.style.display = "none";
-          but.disabled = "";
+          //but.disabled = "";
         } else {
           error1.style.display = "block";
-          but.disabled = "disabled";
+          //but.disabled = "disabled";
         }
         var upper = /[A-Z]/g;
         if (input.value.match(upper)) {
           error2.style.display = "none";
-          but.disabled = "";
+          //but.disabled = "";
         } else {
           error2.style.display = "block";
-          but.disabled = "disabled";
+          //but.disabled = "disabled";
         }
         //var special = /[0-9]/g;
         if (input.value.length > 7) {
           error3.style.display = "none";
-          but.disabled = ""
+          //but.disabled = ""
         } else {
           error3.style.display = "block";
-          but.disabled = "disabled";
+          //but.disabled = "disabled";
         }
         var space = / /g;
         if (input.value.match(space)) {
@@ -63,7 +63,12 @@
           but.disabled = "disabled";
         } else {
           error4.style.display = "none";
+          //but.disabled = "";
+        }
+        if (input.value.match(lower) && input.value.match(upper) && input.value.length > 7 && !input.value.match(space)) {
           but.disabled = "";
+        } else {
+          but.disabled = "disabled";
         }
       }
     </script>
