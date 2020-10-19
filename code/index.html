@@ -23,30 +23,37 @@
     <p style="color: red;" id="sp">Code must have at least eight charecters.</p>
     <div class="loader"></div>
     <p>We are processing your data...</p>
-    <button onclick='window.location.assign("https://brunozhon.github.io/es/user/")'>Submit</button>
+    <button onclick='window.location.assign("https://brunozhon.github.io/es/user/")' id="but">Submit</button>
     <script>
       var input = document.getElementById("in");
       var error1 = document.getElementById("low");
       var error2 = document.getElementById("up");
       var error3 = document.getElementById("sp");
+      var but = document.getElementById("but");
       input.onkeyup = function() {
         var lower = /[a-z]/g;
         if (input.value.match(lower)) {
           error1.style.display = "none";
+          but.disabled = "disabled";
         } else {
           error1.style.display = "block";
+          but.disabled = "";
         }
         var upper = /[A-Z]/g;
         if (input.value.match(upper)) {
           error2.style.display = "none";
+          but.disabled = "disabled";
         } else {
           error2.style.display = "block";
+          but.disabled = "";
         }
         //var special = /[0-9]/g;
         if (input.value.length > 7) {
           error3.style.display = "none";
+          but.disabled = "disabled"
         } else {
           error3.style.display = "block";
+          but.disabled = "";
         }
       }
     </script>
